@@ -1,7 +1,7 @@
 import React from 'react';
 import { Route } from 'react-router';
 import Home from '../../features/Home/Home';
-import Navigation from '../../features/Navigation/Navigation';
+import Navigation from './Navigation/Navigation';
 
 const App: React.FC = () => {
   return (

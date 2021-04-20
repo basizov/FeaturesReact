@@ -4,7 +4,7 @@ interface IProps {
   className?: string;
 }
 
-const DropdownMenu: React.FC<IProps> = ({className, children}) => {
+const List: React.FC<IProps> = ({className, children}) => {
   return (
     <div className={className}>
       {children}
@@ -12,4 +12,4 @@ const DropdownMenu: React.FC<IProps> = ({className, children}) => {
   );
 };
 
-export default  DropdownMenu;
+export default  List;

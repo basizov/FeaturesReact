@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import DropdownHeader from './DropdownHeader';
-import DropdownMenu from './DropdownMenu';
+import React, { useEffect, useRef, useState } from 'react';
+import Item from '../List/Item';
+import List from '../List/List';
 
 interface IProps {
   className?: string;
@@ -18,18 +18,30 @@ const Dropdown: React.FC<IProps> = ({
   menuClassNameActive,
   children
 }) => {
-  const [showMenu, setShowMenu] = useState(false);
+  const [showMenu, setShowMenu] = useState(false),
+        targetRef = useRef<HTMLDivElement>(null);
+
+  const handler = (e: Event) => {
+    if (targetRef.current && e.target instanceof Node && !targetRef.current.contains(e.target)) {
+      setShowMenu(false);
+    }
+  }
+
+  useEffect(() => {
+    document.addEventListener('mousedown', handler);
+    return(() => document.removeEventListener('mousedown', handler))
+  });
 
   return (
-    <div className={className}>
-      <DropdownHeader
+    <div className={className} ref={targetRef}>
+      <Item
         className={headerClassName}
         onClick={() => setShowMenu(!showMenu)}>
-        {header}</DropdownHeader>
-      <DropdownMenu
+        {header}</Item>
+      <List
         className={showMenu ? `${menuClassName} ${menuClassNameActive}` : menuClassName}>
         {children}
-      </DropdownMenu>
+      </List>
     </div>
   );
 };
