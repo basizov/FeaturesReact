@@ -8,8 +8,10 @@
 }
 
 .container {
+  position: relative;
   width: 1440px;
   margin: 0 auto;
 }
 
 @import '../../features/Navigation/navigation';
+@import '../../features/Dropdown/dropdown';
