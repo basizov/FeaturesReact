@@ -6,3 +6,10 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+.container {
+  width: 1440px;
+  margin: 0 auto;
+}
+
+@import '../../features/Navigation/navigation';
