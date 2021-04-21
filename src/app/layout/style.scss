@@ -13,5 +13,7 @@
   margin: 0 auto;
 }
 
+@import '../styles/extend';
 @import './Navigation/navigation';
+@import '../../features/Loading/loading';
 @import '../../features/Dropdown/dropdown';
