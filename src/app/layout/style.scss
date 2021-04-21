@@ -8,12 +8,14 @@
 }
 
 .container {
-  position: relative;
   width: 1440px;
   margin: 0 auto;
 }
 
+@import '../styles/root';
 @import '../styles/extend';
+@import '../styles/media';
 @import './Navigation/navigation';
 @import '../../features/Loading/loading';
 @import '../../features/Dropdown/dropdown';
+@import '../../features/Reviews/reviews';

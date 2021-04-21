@@ -6,6 +6,7 @@ const Home: React.FC = () => {
   return (
     <section className="home">
       <Link to='/navigation'>Navigation</Link>
+      <Link to='/reviews'>Reviews</Link>
       <Loading />
     </section>
   );

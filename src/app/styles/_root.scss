@@ -1,0 +1,15 @@
+$main-color: rgb(26, 118, 238);
+$submain-color: rgb(70, 114, 144);
+$main-bg-color: rgb(36, 60, 126);
+$hover-bg-color: rgb(32, 55, 117);
+
+:root {
+  --main-color: #{$main-color};
+  --submain-color: #{$submain-color};
+  --main-bg-color: #{$main-bg-color};
+  --hover-bg-color: #{$hover-bg-color};
+}
+
+::selection {
+  color: rgb(246, 166, 166);
+}

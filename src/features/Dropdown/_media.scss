@@ -1,0 +1,18 @@
+@media (max-width: 1050px) {
+  .dropdown {
+    &__menu {
+      left: 35%;
+    }
+  }
+}
+
+@media (max-width: 767px) {
+  .dropdown {
+    &__menu {
+      left: 15%;
+      &:before {
+        right: 15%;
+      }
+    }
+  }
+}
