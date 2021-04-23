@@ -8,8 +8,17 @@ const App: React.FC = () => {
   return (
     <div className="App">
       <Route exact path='/' component={Home} />
-      <Route exact path='/navigation' component={Navigation} />
-      <Route exact path='/reviews' component={Reviews} />
+      <Route
+        path={'/(.+)'}
+        render={() => (
+          <>
+            {/* <Navigation /> */}
+            <div className="container">
+              <Route exact path='/navigation' component={Navigation} />
+              <Route exact path='/reviews' component={Reviews} />
+            </div>
+          </>
+        )} />
     </div>
   );
 }
