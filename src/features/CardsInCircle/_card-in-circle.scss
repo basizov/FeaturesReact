@@ -1,0 +1,45 @@
+.card-in-circle {
+  cursor: pointer;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(16, 46, 63);
+  border-radius: 100%;
+  z-index: 1;
+  &--parent {
+    width: 30rem;
+    height: 30rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover {
+    .card {
+      transform: translate(-50%, -50%) rotate(0) skew(0) scale(1.5) !important;
+      box-shadow: none;
+      z-index: 2;
+      &:last-of-type {
+        transition: transform .5s !important;
+        box-shadow: .1rem .1rem .7rem rgba(#000000, 0.7);
+      }
+    }
+  }
+}
+
+.card {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 50%;
+  height: 70%;
+  background-color: rgb(234, 241, 209);
+  border-radius: 1rem;
+  border: 1px solid rgba(#000000, 0.7);
+  box-shadow: .7rem .3rem 1rem rgba(#000000, 0.7);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all .5s;
+}

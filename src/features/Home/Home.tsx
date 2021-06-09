@@ -7,6 +7,7 @@ const Home: React.FC = () => {
     <section className="home">
       <Link to='/navigation'>Navigation</Link>
       <Link to='/reviews'>Reviews</Link>
+      <Link to='/cards-in-circle'>Cards-in-circle</Link>
       <Loading />
     </section>
   );
